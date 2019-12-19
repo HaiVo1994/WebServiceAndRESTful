@@ -2,20 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a4f2ee7-055d-4bcf-b8e6-2403d84f03aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/ApplicationInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/controller/WrittingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/formatter/CategoryFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/model/Writing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/repository/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/repository/WritingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/service/WritingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlogRESTful/src/main/java/com/blog/service/impl/WritingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +156,7 @@
       <workItem from="1576117165752" duration="12118000" />
       <workItem from="1576199965942" duration="755000" />
       <workItem from="1576200843543" duration="99000" />
-      <workItem from="1576459226371" duration="1983000" />
+      <workItem from="1576459226371" duration="3827000" />
     </task>
     <task id="LOCAL-00001" summary="RESTful">
       <created>1576200307812</created>

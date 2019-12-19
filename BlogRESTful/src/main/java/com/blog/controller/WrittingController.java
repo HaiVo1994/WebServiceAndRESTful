@@ -18,6 +18,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.Date;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(value = "/writing")
 public class WrittingController {
     @Autowired
@@ -43,15 +44,25 @@ public class WrittingController {
     }
 
 
+//    @RequestMapping(value = "/", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+//    public ResponseEntity<Void> create(@RequestBody JsonObject writingJson, UriComponentsBuilder uriComponentsBuilder){
+//        //JsonObject writingJson = (JsonObject) Json;
+//        Writing writing = new Writing();
+//        writing.setContent((String) writingJson.get("content"));
+//        writing.setTittle((String) writingJson.get("tittle"));
+//        writing.setTime(new Date());
+//        Category category = categoryService.findById(Long.parseLong((String) writingJson.get("category")));
+//        writing.setCategory(category);
+//        writingService.save(writing);
+//        HttpHeaders httpHeaders = new HttpHeaders();
+//        httpHeaders.setLocation(uriComponentsBuilder.path("/writing/{id}").buildAndExpand(writing.getId()).toUri());
+//        return new ResponseEntity<Void>(httpHeaders, HttpStatus.CREATED);
+//    }
     @RequestMapping(value = "/", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
-    public ResponseEntity<Void> create(@RequestBody JsonObject writingJson, UriComponentsBuilder uriComponentsBuilder){
-        //JsonObject writingJson = (JsonObject) Json;
-        Writing writing = new Writing();
-        writing.setContent((String) writingJson.get("content"));
-        writing.setTittle((String) writingJson.get("tittle"));
+    public ResponseEntity<Void> create(@RequestBody Writing writing, UriComponentsBuilder uriComponentsBuilder){
         writing.setTime(new Date());
-        Category category = categoryService.findById(Long.parseLong((String) writingJson.get("category")));
-        writing.setCategory(category);
+        //Category category = categoryService.findById(Long.parseLong((String) writingJson.get("category")));
+//        writing.setCategory(category);
         writingService.save(writing);
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setLocation(uriComponentsBuilder.path("/writing/{id}").buildAndExpand(writing.getId()).toUri());
@@ -59,15 +70,15 @@ public class WrittingController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT, produces = "application/json;charset=UTF-8")
-    public ResponseEntity<Writing> edit(@PathVariable("id") Long id, @RequestBody JsonObject writingJson){
+    public ResponseEntity<Writing> edit(@PathVariable("id") Long id, @RequestBody Writing writing){
         Writing currentWriting = writingService.findById(id);
-        if ((writingJson==null) || (currentWriting==null)){
+        if ((writing==null) || (currentWriting==null)){
             return new ResponseEntity<Writing>(HttpStatus.NOT_FOUND);
         }
-        Category category = categoryService.findById(Long.parseLong((String) writingJson.get("category")));
-        currentWriting.setCategory(category);
-        currentWriting.setTittle((String) writingJson.get("tittle"));
-        currentWriting.setContent((String) writingJson.get("content"));
+        //Category category = categoryService.findById(Long.parseLong((String) writingJson.get("category")));
+        currentWriting.setCategory(writing.getCategory());
+        currentWriting.setTittle(writing.getTittle());
+        currentWriting.setContent(writing.getContent());
         writingService.save(currentWriting);
         return new ResponseEntity<Writing>(currentWriting, HttpStatus.OK);
     }

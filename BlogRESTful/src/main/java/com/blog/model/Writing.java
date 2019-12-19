@@ -22,7 +22,6 @@ public class Writing {
 
     @ManyToOne
     @JoinColumn(name = "idOfCategory")
-    @JsonIgnore
     Category category;
 
     public Writing() {
